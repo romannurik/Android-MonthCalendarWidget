@@ -74,6 +74,7 @@ public class MonthCalendarWidget extends AppWidgetProvider {
             Calendar cal = Calendar.getInstance();
             int thisMonth = sp.getInt(PREF_MONTH, cal.get(Calendar.MONTH));
             int thisYear = sp.getInt(PREF_YEAR, cal.get(Calendar.YEAR));
+            cal.set(Calendar.DAY_OF_MONTH, 1);
             cal.set(Calendar.MONTH, thisMonth);
             cal.set(Calendar.YEAR, thisYear);
             cal.add(Calendar.MONTH, -1);
@@ -88,6 +89,7 @@ public class MonthCalendarWidget extends AppWidgetProvider {
             Calendar cal = Calendar.getInstance();
             int thisMonth = sp.getInt(PREF_MONTH, cal.get(Calendar.MONTH));
             int thisYear = sp.getInt(PREF_YEAR, cal.get(Calendar.YEAR));
+            cal.set(Calendar.DAY_OF_MONTH, 1);
             cal.set(Calendar.MONTH, thisMonth);
             cal.set(Calendar.YEAR, thisYear);
             cal.add(Calendar.MONTH, 1);
@@ -140,6 +142,7 @@ public class MonthCalendarWidget extends AppWidgetProvider {
         if (!mini) {
             thisMonth = sp.getInt(PREF_MONTH, cal.get(Calendar.MONTH));
             int thisYear = sp.getInt(PREF_YEAR, cal.get(Calendar.YEAR));
+            cal.set(Calendar.DAY_OF_MONTH, 1);
             cal.set(Calendar.MONTH, thisMonth);
             cal.set(Calendar.YEAR, thisYear);
         } else {
